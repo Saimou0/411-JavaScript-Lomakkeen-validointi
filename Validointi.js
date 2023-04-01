@@ -17,8 +17,7 @@ function TarkistaKentat() {
     const postinumero = form.Postinumero.value;
     const sahkoposti = form.Sahkoposti.value;
     const sukupuoli = form.Sukupuoli.value;
-    const kieli1 = document.getElementById("Kieli1");
-    const kieli2 = document.getElementById("Kieli2");
+    const kieli = document.querySelectorAll('input[type="checkbox"]')
 
     // Käyttäjä
 
@@ -61,7 +60,10 @@ function TarkistaKentat() {
 
     // Postinumero
 
-    if (isNaN(postinumero)) {
+    if (postinumero.length == 0) {
+        document.getElementById("halytysKentta").innerHTML = "Postinumero tyhjä";
+        return false
+    } else if (isNaN(postinumero)) {
         document.getElementById("halytysKentta").innerHTML = "Postinumerossa ei saa olla kirjaimia";
         return false;
 
@@ -85,10 +87,16 @@ function TarkistaKentat() {
         return false;
     }
 
-    if (kieli1.checked != true || kieli2.checked != true) {
-        document.getElementById("halytysKentta").innerHTML = "Valitse kieli";
-        return false;
-    }
+    let onkoKieltaValittu = false;
+    kieli.forEach(Kieli => {
+        if (Kieli.checked) {
+            onkoKieltaValittu = true;
+        }
+    });
 
-    return true
+    if (onkoKieltaValittu) {
+        return true;
+    } else {
+        document.getElementById("halytysKentta").innerHTML = "Valitse kieli"
+    }
 }
