@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>411 JavaScript Lomakkeen validointi</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>411 JavaScript Lomakkeen validointi</h1>
+        <h2>Rekistöröitymislomake</h2>
+        <p>Siirry kentästä toiseen tab-näppäimellä</p>
+
+        <p id="halytysKentta" class="halytysKentta"></p>
+
+        <form name="form" action="" method="get">
+            <div class="settings">
+                <label for="Kayttaja">Käyttäjä ID</label>
+                <input type="text" id="Kayttaja" name="Kayttaja">
+    
+                <label for="Salasana">Salasana</label>
+                <input type="password" id="Salasana" name="Salasana">
+    
+                <label for="Nimi">Nimi</label>
+                <input type="text" id="Nimi"> 
+    
+                <label for="Osoite">Osoite</label>
+                <input type="text" id="Osoite"> 
+
+                <label for="Maa">Maa</label>
+                <select name="Maa" id="Maa">
+                    <option value="Valitse" disabled selected hidden>-valitse maa-</option>
+                    <option value="Suomi">Suomi</option>
+                    <option value="MuuKuinSuomi">Muu kuin Suomi</option>
+                </select> 
+
+                <label for="Postinumero">Postinumero</label>
+                <input type="text" id="Postinumero"> 
+    
+                <label for="Sahkoposti">Sähköposti</label>
+                <input type="email" id="Sahkoposti">
+
+            </div>
+
+            <br>
+
+            <div class="settings2">
+                <label for="Sukupuoli">Sukupuoli:</label>
+
+                <input type="radio" id="Mies" name="Sukupuoli" value="Mies">
+                <label for="Mies" class="radiot">Mies</label>
+                
+                <input type="radio" id="Nainen" name="Sukupuoli" value="Nainen">
+                <label for="Nainen" class="radiot">Nainen</label>
+    
+                <input type="radio" id="EnHaluaKertoa" name="Sukupuoli" value="EnHaluaKertoa">
+                <label for="EnHaluaKertoa" class="radiot">En halua kertoa</label>
+            </div>
+            
+            <br>
+
+            <div class="settings2">
+                <label for="Kieli">Kieli:</label>
+
+                <input type="checkbox" id="Kieli1" name="Kieli" value="Suomi">
+                <label for="Suomi">Suomi</label>
+    
+                <input type="checkbox" id="Kieli2" name="Kieli" value="MuuKuinSuomi"> 
+                <label for="MuuKuinSuomi">Muu kuin suomi</label>
+            </div>
+
+            <br>
+
+            <div class="settings3">
+                <label for="Lisatietoja">Lisätietoja</label>
+                <textarea name="Lisatietoja" id="Lisatietoja" cols="30" rows="10"></textarea>
+            </div>
+
+
+            <input type="button" value="Lähetä" onclick="Validoi(this.form)">
+
+        </form>
+    
+    </div>
+
+    <script src="Validointi.js"></script>
+</body>
+</html>
