@@ -12,23 +12,34 @@
     <div class="container">
         <h1>411 JavaScript Lomakkeen validointi</h1>
         <h2>Rekistöröitymislomake</h2>
-        <p>Siirry kentästä toiseen tab-näppäimellä</p>
+        <p>Siirry kentästä toiseen tab-näppäimellä ja sirry edelliseen kenttään painamalla shift + tab</p>
 
         <p id="halytysKentta" class="halytysKentta"></p>
 
         <form name="form" action="" method="get">
             <div class="settings">
+
+                <!-- Kayttaja ID -->
+
                 <label for="Kayttaja">Käyttäjä ID</label>
                 <input type="text" id="Kayttaja" name="Kayttaja">
+
+                <!-- Salasana -->
     
                 <label for="Salasana">Salasana</label>
                 <input type="password" id="Salasana" name="Salasana">
+
+                <!-- Nimi -->
     
                 <label for="Nimi">Nimi</label>
                 <input type="text" id="Nimi"> 
+
+                <!-- Osoite -->
     
                 <label for="Osoite">Osoite</label>
                 <input type="text" id="Osoite"> 
+
+                <!-- Maa valinta -->
 
                 <label for="Maa">Maa</label>
                 <select name="Maa" id="Maa">
@@ -37,8 +48,12 @@
                     <option value="MuuKuinSuomi">Muu kuin Suomi</option>
                 </select> 
 
+                <!-- Postinumero -->
+
                 <label for="Postinumero">Postinumero</label>
-                <input type="text" id="Postinumero"> 
+                <input type="text" id="Postinumero">
+                
+                <!-- Sähköposti -->
     
                 <label for="Sahkoposti">Sähköposti</label>
                 <input type="email" id="Sahkoposti">
@@ -46,6 +61,8 @@
             </div>
 
             <br>
+
+            <!-- Sukupuoli -->
 
             <div class="settings2">
                 <label for="Sukupuoli">Sukupuoli:</label>
@@ -62,6 +79,8 @@
             
             <br>
 
+            <!-- Kieli -->
+
             <div class="settings2">
                 <label for="Kieli">Kieli:</label>
 
@@ -74,9 +93,11 @@
 
             <br>
 
+            <!-- Lisätietoja -->
+
             <div class="settings3">
                 <label for="Lisatietoja">Lisätietoja</label>
-                <textarea name="Lisatietoja" id="Lisatietoja" cols="30" rows="10"></textarea>
+                <textarea name="Lisatietoja" id="Lisatietoja" cols="25" rows="10"></textarea>
             </div>
 
 
